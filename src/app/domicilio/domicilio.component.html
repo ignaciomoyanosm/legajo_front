@@ -1,0 +1,42 @@
+<h2>{{titulo}}</h2>
+<button class="btn btn-info" type="button" [routerLink]="['/domicilio/form']">Agregar Domicilio</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Calle</th>
+        <th scope="col">Altura</th>
+        <th scope="col">Departamento</th>
+        <th scope="col">URL Google maps</th>
+        <th scope="col">Codigo Postal</th>
+        <th scope="col">Localidad</th>
+        <th scope="col">Provincia</th>
+        <th scope="col">Pais</th>
+
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let domicilio of domicilio">
+        <th scope="row">{{domicilio.id}}</th>
+        <td>{{domicilio.calle}}</td>
+        <td>{{domicilio.numero}}</td>
+        <td>{{domicilio.departamento}}</td>
+        <td>{{domicilio.url_maps}}</td>
+        <td>{{domicilio.codigo_postal}}</td>
+        <td>{{domicilio.localidad.nombre}}</td>
+        <td>{{domicilio.localidad.provincia.nombre}}</td>
+        <td>{{domicilio.localidad.provincia.pais.nombre}}</td>
+
+      
+
+  
+       
+
+
+        
+      </tr>
+    </tbody>
+
+  </table>

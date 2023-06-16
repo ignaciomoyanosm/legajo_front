@@ -1,0 +1,34 @@
+
+<h2>{{titulo}}</h2>
+
+<button class="btn btn-info" type="button" [routerLink]="['/familiar/form']">Nuevo familiar</button>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre y Apellido</th>
+        <th scope="col">Parentesco</th>
+        <th scope="col">Esta a cargo?</th>
+        <th scope="col">Nivel de escolaridad</th>
+        <th scope="col">Discapacidad?</th>
+        <th scope="col">Editar</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let familia of familiares">
+        <th scope="row">{{familia.id}}</th>
+        <td>{{familia.nombre_apellido}}</td>
+        <td>{{familia.parentesco}}</td>
+        <td>{{familia.a_cargo}}</td>
+        <td>{{familia.nivel_escolaridad}}</td>
+        <td>{{familia.discapacidad}}</td>
+        <td><button type="button" name="button" class="btn btn-primary" [routerLink]="['familiar/form',familia.id]">Editar</button></td>
+
+
+        
+      </tr>
+    </tbody>
+
+  </table>
